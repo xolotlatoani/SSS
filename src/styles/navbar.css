@@ -129,7 +129,43 @@
 }
 
 @media (max-width: 768px) {
+  .nav-inner {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 14px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+  }
+
+  .nav-status {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
   .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 6px 2px 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.06);
   }
 }
