@@ -1,23 +1,188 @@
-<div fxLayout="column" fxLayoutAlign="center center" class="margin-top">
+<main class="sss-page" id="top">
 
-  <img src="assets/sss.jpg" alt="SSS Logo">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-glow hero-glow-pink"></div>
+    <div class="hero-glow hero-glow-cyan"></div>
 
-  <div class="margin-top">
-    <strong>You are probably asking yourself: "WTF is this"</strong>
-    <br>
-    <strong>To be honest we don't have any answers but here are some videos:</strong>
-  </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow-pill">
+          <mat-icon>bolt</mat-icon>
+          <span>OFFICIAL HEADQUARTERS • TROLLS, NERDS &amp; LEGENDS</span>
+        </div>
 
-  <iframe class="margin-top" width="600" height="340"
-          src="https://www.youtube.com/embed?listType=playlist&list=UUB_MUgAx83W7dgjcVzBvzMQ"
-          frameborder="0" allowfullscreen></iframe>
+        <h1 class="hero-title">
+          SUPER <span class="text-gradient">SEXY</span> SQUAD
+        </h1>
 
-  <iframe class="margin-top" width="600" height="340"
-          src="https://www.youtube.com/embed?listType=playlist&list=UUzI3_nqDwiieD9xWKNoi8Pg"
-          frameborder="0" allowfullscreen></iframe>
+        <p class="hero-subtitle">
+          You are probably asking yourself: <strong>“WTF is this?”</strong><br>
+          To be honest, we still don’t have any answers—just elite friendship, questionable strategies, and years of legendary clips.
+        </p>
 
-  <iframe class="margin-top" width="600" height="340"
-          src="https://www.youtube.com/embed?listType=playlist&list=UURtFnCJzX9Xj5tN7_NuiIWw"
-          frameborder="0" allowfullscreen></iframe>
+        <div class="hero-actions">
+          <a href="#theater" class="btn-primary">
+            <mat-icon>play_circle_filled</mat-icon>
+            <span>Watch Squad TV</span>
+          </a>
 
-</div>
+          <button type="button" class="btn-hype" (click)="boostHype()">
+            <mat-icon>whatshot</mat-icon>
+            <span>Squad Hype: {{ hypeCount }} 🔥</span>
+          </button>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card" *ngFor="let stat of squadStats">
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+            <span class="stat-sub">{{ stat.sub }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="poster-frame">
+          <div class="poster-sticker sticker-top">SITCOM OPENING ENERGY</div>
+          <img src="assets/sss.jpg" alt="Super Sexy Squad Skyline Logo" class="hero-logo-img">
+          <div class="poster-caption">
+            <span class="caption-tag">S01 • EP∞</span>
+            <span>Filmed on location in voice chat &amp; real life</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SQUAD VIBE GENERATOR -->
+  <section class="vibe-section" id="vibes">
+    <div class="section-header">
+      <span class="section-kicker">INTERACTIVE SQUAD TOOLS</span>
+      <h2>THE SQUAD SOUND &amp; EXCUSE BOARD</h2>
+      <p>Need an excuse for why that play went sideways or a mission for tonight’s lobby? Tap below.</p>
+    </div>
+
+    <div class="interactive-grid">
+      <div class="interactive-card card-pink">
+        <div class="card-badge">
+          <mat-icon>mic_external_on</mat-icon>
+          <span>OFFICIAL SQUAD EXCUSE GENERATOR</span>
+        </div>
+        <p class="quote-box">“{{ currentExcuse }}”</p>
+        <button type="button" class="btn-action" (click)="rollExcuse()">
+          <mat-icon>casino</mat-icon>
+          <span>Roll Another Excuse</span>
+        </button>
+      </div>
+
+      <div class="interactive-card card-cyan">
+        <div class="card-badge">
+          <mat-icon>emoji_events</mat-icon>
+          <span>TONIGHT'S SQUAD SIDE-QUEST</span>
+        </div>
+        <p class="quote-box">“{{ currentChallenge }}”</p>
+        <button type="button" class="btn-action btn-cyan" (click)="rollChallenge()">
+          <mat-icon>bolt</mat-icon>
+          <span>New Squad Quest</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQUAD ARCHETYPES / ROSTER -->
+  <section class="roster-section" id="roster">
+    <div class="section-header">
+      <span class="section-kicker">MEET THE ARCHETYPES</span>
+      <h2>ANATOMY OF THE SUPER SEXY SQUAD</h2>
+      <p>Every friend group has them. Ours just happens to look way better doing it.</p>
+    </div>
+
+    <div class="roster-grid">
+      <article class="role-card" *ngFor="let role of squadRoles">
+        <div class="role-top">
+          <div class="role-icon">
+            <mat-icon>{{ role.icon }}</mat-icon>
+          </div>
+          <span class="sexy-meter">SEXY LEVEL: {{ role.sexyRating }}</span>
+        </div>
+        <h3>{{ role.title }}</h3>
+        <span class="role-alias">{{ role.alias }}</span>
+        <p class="role-desc">{{ role.specialty }}</p>
+        <div class="role-power">
+          <strong>Signature Move:</strong> {{ role.powerMove }}
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SSS TV / YOUTUBE PLAYLIST THEATER -->
+  <section class="theater-section" id="theater">
+    <div class="section-header">
+      <span class="section-kicker">CAUGHT IN 4K</span>
+      <h2>SSS TV // THE VIDEO VAULT</h2>
+      <p>Grab popcorn. Zero context provided, maximum entertainment guaranteed.</p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-card" *ngFor="let item of playlists">
+        <div class="video-card-header">
+          <span class="video-tag">{{ item.tag }}</span>
+          <span class="video-vibe">{{ item.vibe }}</span>
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <div class="video-frame-wrapper">
+          <iframe
+            [src]="item.embedUrl"
+            title="{{ item.title }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQUAD HALL OF FAME & RULES -->
+  <section class="memories-section" id="memories">
+    <div class="memories-grid">
+      <div class="rules-panel">
+        <span class="section-kicker">UNWRITTEN LAWS</span>
+        <h2>THE SQUAD CODE</h2>
+        <ul class="rules-list">
+          <li *ngFor="let rule of commandments; let i = index">
+            <span class="rule-num">0{{ i + 1 }}</span>
+            <span class="rule-text">{{ rule }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="polaroid-panel">
+        <div class="polaroid-card">
+          <div class="polaroid-tape"></div>
+          <img src="assets/themarks.jpg" alt="Squad Milestones - The Marks">
+          <div class="polaroid-caption">
+            <strong>Squad Milestones IRL ❤️🎣</strong>
+            <span>From late-night lobbies to real-life celebrations (#MeetTheMarks &amp; beyond)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sss-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">SUPER SEXY SQUAD</span>
+        <p>Trolls, nerds, and best friends for life.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#top" class="back-top">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</main>

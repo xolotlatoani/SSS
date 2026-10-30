@@ -1,3 +1,132 @@
-.span {
-  margin: auto;
+.sss-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(11, 7, 22, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.brand-badge {
+  font-family: 'Bungee', cursive, sans-serif;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ff2a85 0%, #ff8a00 100%);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 18px rgba(255, 42, 133, 0.6);
+  transform: rotate(-3deg);
+  transition: transform 0.2s ease;
+}
+
+.brand:hover .brand-badge {
+  transform: rotate(3deg) scale(1.06);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: 'Bungee', cursive, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  color: #ffe600;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.brand-sub {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #0b0716;
+      background: #ffe600;
+      box-shadow: 0 0 14px rgba(255, 230, 0, 0.5);
+    }
+  }
+}
+
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #e2f1ff;
+
+  strong {
+    color: #00f0ff;
+    letter-spacing: 0.6px;
+  }
+}
+
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+  animation: pulseGlow 1.6s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 }
