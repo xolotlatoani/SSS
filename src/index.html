@@ -12,12 +12,27 @@
   <meta property="og:description" content="Trolls and nerds">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/vibes-roster.css">
+  <link rel="stylesheet" href="styles/theater-memories.css">
   <script data-ad-client="ca-pub-4233876912511360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
-  <app-root></app-root>
+  <sss-navbar></sss-navbar>
+  <main class="sss-page" id="top">
+    <sss-hero></sss-hero>
+    <sss-vibe-board></sss-vibe-board>
+    <sss-roster></sss-roster>
+    <sss-theater></sss-theater>
+    <sss-memories></sss-memories>
+    <sss-footer></sss-footer>
+  </main>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

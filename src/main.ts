@@ -1,12 +1,7 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+import './components/sss-navbar.js';
+import './components/sss-hero.js';
+import './components/sss-vibe-board.js';
+import './components/sss-roster.js';
+import './components/sss-theater.js';
+import './components/sss-memories.js';
+import './components/sss-footer.js';

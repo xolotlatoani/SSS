@@ -1,3 +1,4 @@
+/* Sticky Navbar Styles */
 .sss-navbar {
   position: sticky;
   top: 0;
@@ -69,23 +70,23 @@
   display: flex;
   align-items: center;
   gap: 22px;
+}
 
-  a {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.4px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    transition: all 0.2s ease;
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
 
-    &:hover {
-      color: #0b0716;
-      background: #ffe600;
-      box-shadow: 0 0 14px rgba(255, 230, 0, 0.5);
-    }
-  }
+.nav-links a:hover {
+  color: #0b0716;
+  background: #ffe600;
+  box-shadow: 0 0 14px rgba(255, 230, 0, 0.5);
 }
 
 .nav-status {
@@ -98,11 +99,11 @@
   padding: 6px 14px;
   border-radius: 999px;
   color: #e2f1ff;
+}
 
-  strong {
-    color: #00f0ff;
-    letter-spacing: 0.6px;
-  }
+.nav-status strong {
+  color: #00f0ff;
+  letter-spacing: 0.6px;
 }
 
 .pulse-dot {
@@ -115,7 +116,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }

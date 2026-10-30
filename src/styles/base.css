@@ -1,0 +1,61 @@
+/* Base & Global Layout - Super Sexy Squad */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0716;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(255, 42, 133, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(0, 240, 255, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(255, 199, 0, 0.12) 0%, transparent 50%);
+  color: #f8f9fa;
+  font-family: 'Outfit', Roboto, 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #ff2a85;
+  color: #ffffff;
+}
+
+.sss-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.section-header h2 {
+  font-family: 'Bungee', cursive, sans-serif;
+  font-size: clamp(24px, 3.6vw, 38px);
+  margin: 8px 0 10px;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #ff2a85;
+  text-transform: uppercase;
+}
