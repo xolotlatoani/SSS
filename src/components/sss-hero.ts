@@ -60,7 +60,7 @@ export class SssHero extends HTMLElement {
           <div class="hero-visual">
             <div class="poster-frame">
               <div class="poster-sticker">SITCOM OPENING ENERGY</div>
-              <img src="assets/sss.jpg" alt="Super Sexy Squad Skyline Logo" class="hero-logo-img">
+              <img src="assets/sss.jpg" alt="Super Sexy Squad Skyline Logo" width="400" height="224" fetchpriority="high" class="hero-logo-img">
               <div class="poster-caption">
                 <span class="caption-tag">S01 &bull; EP&infin;</span>
                 <span>Filmed on location in voice chat &amp; real life</span>

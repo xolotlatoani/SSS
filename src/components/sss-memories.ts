@@ -25,7 +25,7 @@ export class SssMemories extends HTMLElement {
           <div class="polaroid-panel">
             <div class="polaroid-card">
               <div class="polaroid-tape"></div>
-              <img src="assets/themarks.jpg" alt="Squad Milestones - The Marks">
+              <img src="assets/themarks.jpg" alt="Squad Milestones - The Marks" width="320" height="320" loading="lazy">
               <div class="polaroid-caption">
                 <strong>Squad Milestones IRL ❤️🎣</strong>
                 <span>From late-night lobbies to real-life celebrations (#MeetTheMarks &amp; beyond)</span>

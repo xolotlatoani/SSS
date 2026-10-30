@@ -1,0 +1,21 @@
+{
+  "name": "Super Sexy Squad (SSS)",
+  "short_name": "SSS",
+  "description": "Official headquarters of the Super Sexy Squad — trolls, nerds, gaming highlights, and lifelong friends.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0716",
+  "theme_color": "#ff2a85",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "assets/sss.jpg",
+      "sizes": "300x168",
+      "type": "image/jpeg"
+    }
+  ]
+}

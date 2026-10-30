@@ -15,6 +15,7 @@ export class SssTheater extends HTMLElement {
             <iframe
               src="${item.embedUrl}"
               title="${item.title}"
+              loading="lazy"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
