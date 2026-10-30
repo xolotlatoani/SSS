@@ -35,7 +35,7 @@ SSS/
 │   ├── manifest.webmanifest        # Web App Manifest
 │   ├── robots.txt                  # Search engine crawler directives
 │   └── sitemap.xml                 # XML sitemap for https://www.supersexysquad.com
-├── tools/                          # AWS CodeBuild compatibility shim for legacy `ng build`
+├── AGENTS.md                       # AI agent & contributor architecture guide
 ├── build.js                        # TypeScript 7.1 native compiler & static asset bundler
 ├── buildspec.yml                   # AWS CodeBuild specification (outputs to ./dist/sss)
 ├── package.json
