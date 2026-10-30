@@ -1,8 +1,0 @@
-{
-  "name": "@angular/cli",
-  "version": "2.0.0",
-  "description": "Compatibility shim so AWS CodeBuild 'ng build' runs TypeScript 7.1 Web Components build",
-  "bin": {
-    "ng": "./bin/ng.js"
-  }
-}

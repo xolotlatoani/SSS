@@ -4,13 +4,10 @@
   "private": true,
   "description": "Super Sexy Squad - Pure TypeScript 7.1, HTML, CSS & Web Components",
   "scripts": {
-    "postinstall": "node tools/install-global-ng-shim.js",
     "build": "node build.js",
-    "typecheck": "node build.js",
-    "ng": "node build.js"
+    "typecheck": "node build.js"
   },
-  "dependencies": {
-    "typescript": "7.1.0-beta",
-    "@angular/cli": "file:./tools/ng-shim"
+  "devDependencies": {
+    "typescript": "7.1.0-dev.20261029.1"
   }
 }
