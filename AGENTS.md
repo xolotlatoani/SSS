@@ -11,9 +11,12 @@
 - **Deployment Target**: Built via **AWS CodeBuild** (`buildspec.yml`) and deployed as static files to **Amazon S3** from `./dist/sss`.
 
 ## Directory Layout
-- `src/index.html` — Main HTML entry point, SEO metadata, JSON-LD, and static fallback content.
+- `src/index.html` — Main HQ entry point, SEO metadata, JSON-LD, and static fallback content.
+- `src/t3n0r10.html` — Dedicated creator page for **T3N0R10 (Juan Tenorio)** featuring only the latest squad release (*Drunk fools*).
+- `src/vim-diesel.html` — Dedicated creator page for **Vim Diesel (Vimal)** featuring *Vimal + Sravani Wedding*.
+- `src/andrew-marks.html` — Dedicated creator page for **Andrew!! (Andrew Marks)** featuring *#MeetTheMarks2020* and *Oahu Hawaii Vlog*.
 - `src/main.ts` — Imports and registers all custom elements.
-- `src/data/squad-data.ts` — Typed interfaces and content arrays (`SQUAD_STATS`, `SQUAD_ROLES`, `SQUAD_EXCUSES`, `SQUAD_CHALLENGES`, `SQUAD_PLAYLISTS`, `SQUAD_COMMANDMENTS`).
+- `src/data/squad-data.ts` — Typed interfaces and content arrays (`SQUAD_STATS`, `SQUAD_ROLES`, `SQUAD_EXCUSES`, `SQUAD_CHALLENGES`, `SQUAD_PLAYLISTS`, `CHANNEL_PROFILES`).
 - `src/components/` — Modular Web Components:
   - `sss-navbar.ts` (`<sss-navbar>`)
   - `sss-hero.ts` (`<sss-hero>`)
@@ -21,8 +24,9 @@
   - `sss-roster.ts` (`<sss-roster>`)
   - `sss-theater.ts` (`<sss-theater>`)
   - `sss-memories.ts` (`<sss-memories>`)
+  - `sss-channel-page.ts` (`<sss-channel-page>`)
   - `sss-footer.ts` (`<sss-footer>`)
-- `src/styles/` — Modular CSS (`base.css`, `navbar.css`, `hero.css`, `vibes-roster.css`, `theater-memories.css`).
+- `src/styles/` — Modular CSS (`base.css`, `navbar.css`, `hero.css`, `vibes-roster.css`, `theater-memories.css`, `channel-page.css`).
 - `src/assets/` — Static images (`sss.jpg`, `themarks.jpg`).
 - `build.js` — Invokes the platform's native TypeScript 7.1 `tsc` binary and copies all static assets into `./dist/sss`.
 

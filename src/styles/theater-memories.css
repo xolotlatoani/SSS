@@ -71,6 +71,34 @@
   height: 100%;
 }
 
+.video-card-footer {
+  margin-top: 16px;
+  display: flex;
+}
+
+.btn-channel-link {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  color: #00f0ff;
+  font-weight: 800;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-channel-link:hover {
+  background: #00f0ff;
+  color: #0b0716;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.45);
+}
+
 /* MEMORIES & SQUAD CODE SECTION */
 .memories-section {
   padding: 52px 0 32px;

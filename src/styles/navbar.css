@@ -83,7 +83,8 @@
   transition: all 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active-link {
   color: #0b0716;
   background: #ffe600;
   box-shadow: 0 0 14px rgba(255, 230, 0, 0.5);

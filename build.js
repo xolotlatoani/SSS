@@ -49,7 +49,17 @@ console.log(`Using compiler: ${versionOut} (${nativeTsc})`);
 
 execFileSync(nativeTsc, ['-p', path.join(rootDir, 'tsconfig.json')], { stdio: 'inherit' });
 
-const staticFiles = ['index.html', 'favicon.ico', 'favicon.svg', 'robots.txt', 'sitemap.xml', 'manifest.webmanifest'];
+const staticFiles = [
+  'index.html',
+  't3n0r10.html',
+  'vim-diesel.html',
+  'andrew-marks.html',
+  'favicon.ico',
+  'favicon.svg',
+  'robots.txt',
+  'sitemap.xml',
+  'manifest.webmanifest'
+];
 for (const file of staticFiles) {
   copyRecursive(path.join(srcDir, file), path.join(outDir, file));
 }
