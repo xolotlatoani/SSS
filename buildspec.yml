@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm config set registry https://registry.npmjs.org/
+      - npm install --legacy-peer-deps || npm install
+  build:
+    commands:
+      - npx ng build --prod=true --configuration=production
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist/sss'
